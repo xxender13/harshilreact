@@ -60,43 +60,30 @@ const Experience = () => {
   }, [activeIndex]);
 
   return (
-    <div name="experience" className="fade-section w-full h-screen bg-gradient-to-b from-gray-800 to-black text-white"    >
-
-<div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
-    <h2 className="text-4xl font-bold mt-20 text-white inline-block p-4"> 
-  Experience  
-</h2>
-      <p className="text-gray-400">
-        Check out some of my work right here
-      </p>
-    
+    <div name="experience" className="fade-section w-full h-screen bg-gradient-to-b from-gray-800 to-black text-white">
+      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
+        <h2 className="text-4xl font-bold mt-20 text-white inline-block p-4">Experience</h2>
+        <p className="text-gray-400">Check out some of my work right here</p>
 
         <div className="flex justify-center items-center h-screen">
-          <button
-            onClick={handlePrevClick}
-            className="text-white cursor-pointer absolute left-0 top-1/2 transform -translate-y-1/2"
-          >
+          <button onClick={handlePrevClick} className=" text-2xl text-white cursor-pointer absolute left-20 top-1/2 transform -translate-y-1/2">
             {"<"}
           </button>
-          <div className="portfolio-container mx-4">
+          <div className="portfolio-container mx-4 flex items-center"> {/* Added 'flex' class */}
             <img
               src={activePortfolio.src}
               alt=""
               className="rounded-md max-h-96 max-w-full duration-200 hover:scale-105"
+              style={{ margin: "auto" }} 
             />
             <div className="overlay">
               <div className="content mx-auto w-full text-center">
-                <h3 className="text-2xl text-white mb-4">
-                  {activePortfolio.title}
-                </h3>
+                <h3 className="text-2xl text-white mb-4">{activePortfolio.title}</h3>
                 <p className="text-gray-400">{activePortfolio.details}</p>
               </div>
             </div>
           </div>
-          <button
-            onClick={handleNextClick}
-            className="text-white cursor-pointer absolute right-0 top-1/2 transform -translate-y-1/2"
-          >
+          <button onClick={handleNextClick} className="text-2xl text-white cursor-pointer absolute right-40 top-1/2 transform -translate-y-1/2">
             {">"}
           </button>
         </div>
