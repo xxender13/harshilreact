@@ -2,18 +2,15 @@ import React from "react";
 
 const Education = () => {
   return (
-    <div
-      name="education"
-      className="fade-section w-full h-screen bg-gradient-to-b from-gray-800 to-black text-white"
-    >
-      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
-        <div className="pb-8">
-          <p className="text-4xl font-bold inline border-b-4 border-gray-500">
-            Education
-          </p>
-        </div>
+    <div name="education" className="fade-section w-full h-screen bg-gradient-to-b from-gray-800 to-black text-white"    >
 
-        <p className="text-xl mt-20">
+    <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
+        <h2 className="text-4xl font-bold mt-20 text-white inline-block p-4"> 
+      Education  
+    </h2>
+          
+
+      
   {/* Education Level 1 */}
   <span className="block mb-2">High School</span>
   <div className="relative pt-1">
@@ -76,7 +73,7 @@ const Education = () => {
       <div className="bg-teal-600 h-full" style={{ width: '25%' }}></div>
     </div>
   </div>
-</p>
+
 
       </div>
     </div>

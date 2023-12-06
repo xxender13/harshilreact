@@ -65,7 +65,7 @@ const Skills = () => {
   ];
 
   return (
-    <div name="skills" className="bg-gray-800 py-10">
+    <div name="skills" className="fade-section w-full h-min-[100vh] bg-gradient-to-b from-gray-800 to-black text-white">
 
       <div className="max-w-4xl mx-auto">
         

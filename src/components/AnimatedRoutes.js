@@ -1,36 +1,30 @@
-import React from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-
+import React from 'react'
+import { Switch } from 'react-router-dom';
+import {  Routes, Route, useLocation} from 'react-router-dom';
 import About from "./components/About";
 import Contact from "./components/Contact";
-import Experience from "./components/Experience";
+import Experience from "./components/Experience"; 
 import Education from './components/Education';
 import Home from "./components/Home";
-import NavBar from "./components/NavBar";
 import Portfolio from "./components/Portfolio";
 import Skills from "./components/Skills";
-import SocialLinks from "./components/SocialLinks";
+import { AnimatePresence } from 'framer-motion';
 
-function App() {
+function  AnimatedRoutes() {
+    const location = useLocation();
   return (
-    <Router>
-      <NavBar />
-
-      <Routes>
-        <Route path="/home" element={<Home />} />
+    <AnimatePresence>
+    <Routes location={location} key={location.pathname} >
+        <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/education" element={<Education />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/experience" element={<Experience />} />
         <Route path="/skills" element={<Skills />} />
-        <Route path="/contact" element={<Contact />} />
-        {/* Add a default route for the home page */}
-        <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />    
       </Routes>
-
-      <SocialLinks />
-    </Router>
-  );
+      </AnimatePresence>
+  )
 }
 
-export default App;
+export default  AnimatedRoutes
