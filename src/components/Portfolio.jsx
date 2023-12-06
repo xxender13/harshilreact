@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Project1 from "../assets/portfolio/Project1.jpg";
 import Project2 from "../assets/portfolio/Project2.jpg";
 import Project3 from "../assets/portfolio/Project3.jpg";
 
-const Portfolio = () => {
+const Portfolio = () => {const [isVisible, setIsVisible] = useState(false);
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
   const portfolios = [
     {
       id: 1,
@@ -36,6 +39,11 @@ const Portfolio = () => {
 
   
   return (
+    <div
+    className={` transform transition duration-1000 ease-out ${
+      isVisible ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"
+    }`}
+  >
     <div
       name="projects"
       className="fade-section w-full h-screen bg-gradient-to-b from-gray-800 to-black text-white"
@@ -85,6 +93,7 @@ const Portfolio = () => {
           ))}
         </div>
       </div>
+    </div>
     </div>
   );
   

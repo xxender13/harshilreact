@@ -4,7 +4,11 @@ import InternShip3 from "../assets/InternShip3.jpg";
 import InternShip1 from "../assets/InternShip1.jpg";
 import InternShip4 from "../assets/InternShip4.jpg";
 
-const Experience = () => {
+const Experience = () => { const [isVisible, setIsVisible] = useState(false);
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+  
   const portfolios = [
     {
       id: 1,
@@ -60,6 +64,11 @@ const Experience = () => {
   }, [activeIndex]);
 
   return (
+    <div
+        className={` transform transition duration-1000 ease-out ${
+          isVisible ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"
+        }`}
+      >
     <div name="experience" className="fade-section w-full h-screen bg-gradient-to-b from-gray-800 to-black text-white">
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <h2 className="text-4xl font-bold mt-20 text-white inline-block p-4">Experience</h2>
@@ -88,6 +97,7 @@ const Experience = () => {
           </button>
         </div>
       </div>
+    </div>
     </div>
   );
 };

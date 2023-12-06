@@ -1,7 +1,15 @@
-import React from "react";
+import React,{useEffect,useState} from "react";
 
-const Education = () => {
+const Education = () => { const [isVisible, setIsVisible] = useState(false);
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
   return (
+    <div
+        className={` transform transition duration-1000 ease-out ${
+          isVisible ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"
+        }`}
+      >
     <div name="education" className="fade-section w-full h-screen bg-gradient-to-b from-gray-800 to-black text-white"    >
 
     <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
@@ -76,6 +84,7 @@ const Education = () => {
 
 
       </div>
+    </div>
     </div>
   );
 };

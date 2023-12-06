@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import HeroImage from "../assets/heroImage.png";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { Link } from "react-router-dom";
 
-const Home = () => {
+const Home = () => {const [isVisible, setIsVisible] = useState(false);
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
   return (
+    <div
+        className={` transform transition duration-1000 ease-out ${
+          isVisible ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"
+        }`}
+      >
     <div
       name="home"
       className="h-screen w-full bg-gradient-to-b from-black via-black to-gray-800"
@@ -39,6 +47,7 @@ const Home = () => {
           />
         </div>
       </div>
+    </div>
     </div>
   );
 };

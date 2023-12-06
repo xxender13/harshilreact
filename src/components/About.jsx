@@ -1,7 +1,17 @@
-import React from "react";
+import React,{useEffect,useState} from "react";
+import NavBar from "./NavBar";
 
 const About = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
   return (
+    <div
+        className={` transform transition duration-1000 ease-out ${
+          isVisible ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"
+        }`}
+      >
     <div
       name="about"
       className="fade-section w-full h-screen bg-gradient-to-b from-gray-800 to-black text-white"
@@ -25,6 +35,8 @@ const About = () => {
         </p>
       </div>
     </div>
+    </div>
+ 
   );
 };
 

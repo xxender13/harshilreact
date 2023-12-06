@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import html from "../assets/html.png";
 import css from "../assets/css.png"; 
@@ -9,7 +9,10 @@ import react from "../assets/react.png";
 import tailwind from "../assets/tailwind.png";
 
 
-const Skills = () => {
+const Skills = () => {const [isVisible, setIsVisible] = useState(false);
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
 
   const skills = [
     {
@@ -65,6 +68,11 @@ const Skills = () => {
   ];
 
   return (
+    <div
+    className={` transform transition duration-1000 ease-out ${
+      isVisible ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"
+    }`}
+  >
     <div name="skills" className="fade-section w-full h-min-[100vh] bg-gradient-to-b from-gray-800 to-black text-white">
 
       <div className="max-w-4xl mx-auto">
@@ -103,6 +111,7 @@ const Skills = () => {
         
       </div>
 
+    </div>
     </div>
   );
 };
