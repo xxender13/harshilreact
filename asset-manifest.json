@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/harshilreact/static/css/main.2f3af4bf.css",
+    "main.js": "/harshilreact/static/js/main.4ac58b50.js",
+    "static/media/Project2.jpg": "/harshilreact/static/media/Project2.2591d8f1ce9bfeec7c1c.jpg",
+    "static/media/Project3.jpg": "/harshilreact/static/media/Project3.d22c29fff7984764c055.jpg",
+    "static/media/Project1.jpg": "/harshilreact/static/media/Project1.a05bfe6b7ac588d9d297.jpg",
+    "static/media/heroImage.png": "/harshilreact/static/media/heroImage.850c0971a3538e039917.png",
+    "static/media/react.png": "/harshilreact/static/media/react.0cf951a69d8e58f83f9d.png",
+    "static/media/html.png": "/harshilreact/static/media/html.2ba4fabc69a89a8f71e6.png",
+    "static/media/tailwind.png": "/harshilreact/static/media/tailwind.e47ac876b8d4d0bba47a.png",
+    "static/media/css.png": "/harshilreact/static/media/css.69a82c2d9e45c933a9cb.png",
+    "static/media/InternShip3.jpg": "/harshilreact/static/media/InternShip3.f5ff621ce157299cba9b.jpg",
+    "static/media/InternShip2.jpg": "/harshilreact/static/media/InternShip2.60b8dc4f8db34b829ecd.jpg",
+    "static/media/InternShip4.jpg": "/harshilreact/static/media/InternShip4.c86203cf838a71fbd39f.jpg",
+    "static/media/InternShip1.jpg": "/harshilreact/static/media/InternShip1.912a142a73c8f03e89bb.jpg",
+    "static/media/javascript.png": "/harshilreact/static/media/javascript.1ccd6ef9bb1f9c84ef00.png",
+    "index.html": "/harshilreact/index.html",
+    "main.2f3af4bf.css.map": "/harshilreact/static/css/main.2f3af4bf.css.map",
+    "main.4ac58b50.js.map": "/harshilreact/static/js/main.4ac58b50.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2f3af4bf.css",
+    "static/js/main.4ac58b50.js"
+  ]
+}
